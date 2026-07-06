@@ -1,0 +1,17 @@
+name = "tailscale-cloudflare-sso"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# Domain the WebFinger endpoint answers for. Only acct: URIs
+# ending in @<DOMAIN> will return a JRD; everything else is 404.
+[vars]
+DOMAIN = "example.com"
+
+# Route the worker to your domain. Uncomment and edit before deploying,
+# or configure a custom domain in the Cloudflare dashboard instead.
+# routes = [
+#   { pattern = "example.com/.well-known/webfinger", zone_name = "example.com" }
+# ]
+
+# OIDC_ISSUER is stored as a secret:
+#   npx wrangler secret put OIDC_ISSUER

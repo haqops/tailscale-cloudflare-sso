@@ -1,0 +1,1 @@
+OIDC_ISSUER="https://<team-name>.cloudflareaccess.com/cdn-cgi/access/sso/oidc/<client-id>"
